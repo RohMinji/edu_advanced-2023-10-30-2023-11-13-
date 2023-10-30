@@ -665,7 +665,7 @@ root@edu25:~# sudo mv node_exporter-*.*-amd64/node_exporter /usr/local/bin/
 3. node_exporter 서비스를 실행하고 포트를 확인합니다.
 
 ```bash
-root@edu25:~# < 해야할일 > &
+root@edu25:~# node_exporter &
 ...
 level=info msg="Listening on" address=[::]:9100
 ts=2023-10-24T09:50:40.565Z caller=tls_config.go:277 level=info msg="TLS is disabled." http2=false address=[::]:9100
@@ -676,7 +676,7 @@ ts=2023-10-24T09:50:40.565Z caller=tls_config.go:277 level=info msg="TLS is disa
 4. metric 을 조회해 본다.  
 
 ```bash
-root@edu25:~# <해야 할일 >
+root@edu25:~# curl localhost:9100/metrics
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0# HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
