@@ -73,7 +73,7 @@ kubernetes 메트릭을 수집하는 것은 크게 4가지 종류로 나뉜다.
 
 <br/>
 
-어떤 솔루션을 사용하던 수집하는 metric 정보는 동일하며 promethues를 사용하지 않더라도 promethues 형식으로 데이터 포맷을 노출하는 서비스는 대부분 솔루션에서 수집을 지원한다.  
+어떤 솔루션을 사용하던 수집하는 metric 정보는 동일하며 promethues를 사용하지 않더라도 promethues 형식으로 데이터 포맷을 노출하는 서비스는 대부분 솔루션에서 수집을 지원한다. + 민지: kube_state_metric -> 파드 정보 
 
 
 <img src="./assets/metric_overview.png" style="width: 100%; height: auto;"/>
@@ -88,7 +88,7 @@ Kubelet 에는 CAdvisor 가 내장되어 있고 이는 컨테이너에 관련된
 
 <br/>
 
-CAdvisor 같은 모니터링 에이전트 부류의 도구들은 /metrics라고 하는 경로를 외부에 노출시켜 제공합니다. 이 /metrics 경로로 요청을 보내면 CAdvisor는 키-값 쌍으로 구성된 메트릭 데이터의 목록을 반환하는데, 이 메트릭 데이터를 프로메테우스 같은 시계열 데이터베이스에 저장할 수 있습니다.   
+CAdvisor 같은 모니터링 에이전트 부류의 도구들은 ip/metrics라고 하는 경로를 외부에 노출시켜 제공합니다. 이 /metrics 경로로 요청을 보내면 CAdvisor는 키-값 쌍으로 구성된 메트릭 데이터의 목록을 반환하는데, 이 메트릭 데이터를 프로메테우스 같은 시계열 데이터베이스에 저장할 수 있습니다.   
 
 <br/>
 
@@ -126,7 +126,7 @@ CAdvisor 같은 모니터링 에이전트 부류의 도구들은 /metrics라고 
 
 <br/>
 
-cAdvisor 수집 metric Full List   
+cAdvisor 수집 metric Full List : + 프로메테우스와 프로메테우스 형식은 다르다  
 - https://github.com/google/cadvisor/blob/master/docs/storage/prometheus.md  
 
 <br/>
